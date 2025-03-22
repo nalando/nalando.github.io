@@ -1,0 +1,38 @@
+/* 重置樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 背景影片樣式 */
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* 確保影片位於內容後方 */
+  }
+  
+  /* 內容區域樣式 */
+  .content {
+    position: relative;
+    z-index: 1; /* 確保內容位於影片前方 */
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  /* 標題樣式 */
+  .content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  /* 文字樣式 */
+  .content p {
+    font-size: 1.5em;
+  }
+  
