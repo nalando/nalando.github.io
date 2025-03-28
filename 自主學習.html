@@ -1,0 +1,9 @@
+<div id="button-area"></div>
+
+    <script>
+        fetch('buttons.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('button-area').innerHTML = data;
+            });
+    </script>
