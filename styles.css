@@ -6,7 +6,8 @@
   }
   
   /* 背景影片樣式 */
-  .background-video {
+  .background-video 
+  {
     position: fixed;
     top: 0;
     left: 0;
@@ -17,7 +18,8 @@
   }
   
   /* 內容區域樣式 */
-  .content {
+  .content 
+  {
     position: relative;
     z-index: 1; /* 確保內容位於影片前方 */
     color: rgb(0, 0, 0);
@@ -26,19 +28,49 @@
   }
   
   /* 標題樣式 */
-  .content h1 {
+  .content h1 
+  {
     font-size: 3em;
     margin-bottom: 20px;
   }
   
   /* 文字樣式 */
-  .content p {
+  .content p 
+  {
     font-size: 1.5em;
   }
-  div{
-    margin:20px 0;
+  div
+  {
+    width:60%;
+    margin:auto;
     padding:35px 30px 30px 30px;
     background-color:#fbf9cc;
-    }
+  }
+  .button-container
+  {
+    display: flex; /* 使用flexbox */
+    gap: 20px;/* 按鈕間距 */
+    position: fixed;/*固定在頁面中*/
+    top: 0;/* 距離頁面頂部0 */
+    left: 0;/* 距離頁面左邊0 */
+    background-color: white;/* 背景色，避免遮擋頁面內容 */
+    padding: 10px 0;/* 內邊距，讓按鈕區域更大 */
+    z-index: 1000;/* 設置z-index確保按鈕位於最上層 */
+
+  }  
+  button 
+  {
+    padding: 10px 20px;    /* 按鈕的內邊距 */
+    font-size: 16px;        /* 按鈕文字大小 */
+    cursor: pointer;       /* 鼠標樣式 */
+    border: 1px solid #ccc; /* 按鈕邊框 */
+    border-radius: 5px;     /* 按鈕圓角 */
+    background-color: #f0f0f0; /* 按鈕背景色 */
+  }
+  button:hover {
+    background-color: #ddd; /* 按鈕懸停效果 */
+}
+
+
     
   
