@@ -39,7 +39,7 @@
   {
     font-size: 1.5em;
   }
-  div
+  div:content
   {
     width:60%;
     margin:auto;
