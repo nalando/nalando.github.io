@@ -24,7 +24,10 @@
     z-index: 1; /* 確保內容位於影片前方 */
     color: rgb(0, 0, 0);
     text-align: center;
-    padding: 50px;
+    width:60%;
+    margin:auto;
+    padding:35px 30px 30px 30px;
+    background-color:#fcf9ca;
   }
   
   /* 標題樣式 */
@@ -39,13 +42,7 @@
   {
     font-size: 1.5em;
   }
-  div:content
-  {
-    width:60%;
-    margin:auto;
-    padding:35px 30px 30px 30px;
-    background-color:#fbf9cc;
-  }
+  
   .button-container
   {
     display: flex; /* 使用flexbox */
