@@ -1,5 +1,14 @@
-<div id="button-area"></div>
+<!--自主學習展示-->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>自主學習</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <!--頁面按鈕跳轉-->
+    <div id="button-area"></div>
     <script>
         fetch('buttons.html')
             .then(response => response.text())
@@ -7,3 +16,5 @@
                 document.getElementById('button-area').innerHTML = data;
             });
     </script>
+
+</body>
