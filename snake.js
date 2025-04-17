@@ -2,7 +2,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const BLOCK_SIZE = 20;
 const MAP_SIZE = canvas.width / BLOCK_SIZE;
-let score = 0;
+var score = 0;
 const gameButton = document.getElementById('buttonStart');
 const MAP_WIDTH = canvas.width / BLOCK_SIZE;
 const MAP_HEIGHT = canvas.height / BLOCK_SIZE;
@@ -11,6 +11,7 @@ const MAP_HEIGHT = canvas.height / BLOCK_SIZE;
 let snake, apple, gameInterval;
 
 function startGame() {
+    score = 0;
     snake = {
         body: [{ x: Math.floor(MAP_SIZE / 2), y: Math.floor(MAP_SIZE / 2) }],
         size: 5,
@@ -128,6 +129,15 @@ function drawGame() {
     drawScore();
     checkDeath();
 }
+
+window.addEventListener("keydown", function (e) {
+    // 上下左右鍵的 keyCode：37=左，38=上，39=右，40=下
+    const keys = [37, 38, 39, 40];
+    if (keys.includes(e.keyCode)) {
+        e.preventDefault(); // 阻止預設行為（例如捲動）
+    }
+});
+
 
 gameButton.addEventListener('click', startGame);
 document.addEventListener('keydown', keyDown);
