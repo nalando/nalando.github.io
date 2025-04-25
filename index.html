@@ -1,44 +1,40 @@
-<!--主頁-->
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nalando</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-
+  <meta charset="UTF-8" />
+  <title>Nalando</title>
 </head>
+
 <body>
-    <video autoplay loop muted playsinline class="background-video">
-        <source src="background.mp4" type="video/mp4">   
-    </video>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    
-    <!--頁面按鈕跳轉-->
-    <div id="button-area"></div>
-    <script>
-        fetch('buttons.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('button-area').innerHTML = data;
-            });
-    </script>
-    
-    <div class="content">
-        <p class="content">
+  <!-- 背景影片 -->
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="background.mp4" type="video/mp4" />
+  </video>
 
+  <!-- 文字動畫區 -->
+  <div class="typewriter-container">
+    <div class="typewriter" id="welcomeText">Welcome to my website!</div>
+    <div class="scroll-down">More information ⬇️</div>
+  </div>
 
-            Hi, I'm Nalando.
-            <br /><br /><br /><br /><br /><br><br /><br /><br /><br /><br />
-            I'm here to make sure you will enjoy my website.
-            <br /><br /><br /><br /><br /><br><br /><br /><br /><br /><br />
-            Do you like it?
-            <br>
-            Come on, I have spend a lot of time on my website.
-        </p>
-    </div>
-    
+  <!-- 按鈕載入區域 -->
+  <div id="button-area" class="button-container"></div>
+  <script>
+    fetch('buttons.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('button-area').innerHTML = data;
+      });
+  </script>
 
+  <!-- 主內容區 -->
+  <div class="content">
+    <h1>Hi, I'm Nalando.</h1>
+    <p>
+      I'm here to make sure you will enjoy my website.<br />
+      Do you like it?<br />
+      Come on, I have spent a lot of time on my website.
+    </p>
+  </div>
 </body>
+</html>

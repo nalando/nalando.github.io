@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字動畫停留中間</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Microsoft JhengHei", sans-serif;
+      background-color: #f0f0f0;
+      height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .typewriter-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .typewriter {
+      font-size: 2rem;
+      border-right: 2px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .scroll-down {
+      font-size: 1.2rem;
+      margin-top: 30px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 3.5s forwards; /* 延遲出現 */
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="typewriter-container">
+    <div class="typewriter" id="welcomeText">Welcome to my website！</div>
+    <div class="scroll-down">More information ⬇️</div>
+  </div>
+
+  <script>
+    // 可依需求添加更多 JS 功能
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("頁面載入，動畫啟動");
+    });
+  </script>
+</body>
+</html>
