@@ -1,20 +1,81 @@
-<!--自主學習展示-->
 <!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <title>自主學習</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>自主學習</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ✅ 先設定 MathJax 的 inlineMath 支援 $...$ -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+
+  <!-- ✅ 載入 MathJax v3 CDN -->
+  <script type="text/javascript"
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
 
-    <!--頁面按鈕跳轉-->
-    <div id="button-area"></div>
-    <script>
-        fetch('buttons.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('button-area').innerHTML = data;
-            });
-    </script>
+  <!-- 頁面按鈕跳轉 -->
+  <div id="button-area"></div>
+  <script>
+    fetch('buttons.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('button-area').innerHTML = data;
+      });
+  </script>
+
+  <!-- 內容區塊 -->
+  <div class="content">
+    <h1>Neural network</h1>
+    <p>
+        \[w_1x_1 + w_2x_2 + \cdots + w_nx_n + b = y\] Where w are the weights and x are the inputs of the neural network function.
+        <br>
+        Activation function:
+        \[A(y) = z\]
+    </p>
+    <h1>Forward propagation</h1>
+    <p>
+        \[
+        \begin{aligned}
+        \mathbf{Z}^{[l]} &= \mathbf{W}^{[l]} \mathbf{A}^{[l-1]} + \mathbf{b}^{[l]} \\
+        \mathbf{A}^{[l]} &= g^{[l]}(\mathbf{Z}^{[l]}), \quad \text{for } l = 1, 2, \dots, L
+        \end{aligned}
+        \]
+        \[
+        \mathbf{X} = \mathbf{A}^{[0]} = 
+        \begin{bmatrix}
+        x_{11} & x_{12} \\
+        x_{21} & x_{22} \\
+        x_{31} & x_{32}
+        \end{bmatrix}, \quad
+        \mathbf{W}^{[1]} =
+        \begin{bmatrix}
+        w_{11} & w_{12} & w_{13} \\
+        w_{21} & w_{22} & w_{23} \\
+        w_{31} & w_{32} & w_{33} \\
+        w_{41} & w_{42} & w_{43}
+        \end{bmatrix}, \quad
+        \mathbf{b}^{[1]} =
+        \begin{bmatrix}
+        b_1 \\
+        b_2 \\
+        b_3 \\
+        b_4
+        \end{bmatrix}
+        \]
+        
+        
+    </p>
+  </div>
 
 </body>
+</html>
